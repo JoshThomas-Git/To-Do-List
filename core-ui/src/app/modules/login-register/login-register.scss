@@ -1,0 +1,162 @@
+.container {
+  width: 90%;
+  height: 90%;
+  //height: 100vh;
+  display: flex;
+  padding: 35px;
+  //padding-top: 50px;
+  background: #ffffff;
+  margin-left: 40px;
+
+  .left-box {
+    width: 50%;
+    height: 85%;
+    border-radius: 30px 0 0 30px;
+    background: linear-gradient(180deg, #59fff9 40%, #2c86fc 60%);  
+    padding: 70px 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    h1 {
+      margin-bottom: 20px;
+      color: #000;
+      font-size: 32px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 20px;
+
+      img {
+        width: 40px;
+      }
+    }
+
+    .form {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+
+      input {
+        padding: 12px;
+        border: 1px solid #c6c6c6;
+        border-radius: 6px;
+        font-size: 14px;
+
+        &:focus {
+          outline: none;
+          border-color: #006a67;
+        }
+      }
+
+      .options {
+        display: flex;
+        justify-content: space-between;
+        font-size: 13px;
+
+        a {
+          text-decoration: none;
+          color: #006a67;
+          cursor: pointer;
+        }
+      }
+
+      .primary-btn {
+        background: #004d4b;
+        color: white;
+        padding: 12px;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+
+      .fb-btn,
+      .google-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        padding: 12px;
+        background: transparent;
+        border: 1px solid #004d4b;
+        border-radius: 6px;
+        cursor: pointer;
+      }
+
+      .google-btn img {
+        width: 20px;
+      }
+
+      .toggle-text {
+        text-align: center;
+        margin-top: 10px;
+
+        a {
+          color: #006a67;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  // RIGHT BOX
+  .right-box {
+    margin-left: -30px;
+    width: 50%;
+    height: 90%;
+    background: linear-gradient(135deg, #003a38, #004d4b);
+    color: #fff;
+    border-radius: 30px;
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .illustration {
+      width: 81.5%;
+      margin-bottom: 20px;
+      border-radius: 10px;
+    }
+
+    p {
+      width: 70%;
+      text-align: center;
+      font-size: 16px;
+    }
+  }
+
+  .signup-btn{
+    background: #004d4b;
+        color: white;
+        padding: 12px;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 16px;
+        margin-top: 30px;
+        margin-bottom: 5px;
+  }
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+
+    .left-box,
+    .right-box {
+      width: 100%;
+    }
+
+    .right-box {
+      border-radius: 0;
+      padding: 30px;
+    }
+  }
+}
