@@ -1,0 +1,25 @@
+<header class="todo-header fixed-top">
+  <div class="header-container">
+    <div class="left-section">
+      <img src="assets/todo.png" alt="Logo" class="logo"/>      
+    </div>
+    <div class="right-section">      
+      <div>
+        <div class="user-dropdown">
+          <span class="user-name">
+            name
+            <span class="arrow">&#9662;</span>
+          </span>
+  
+          <div class="dropdown-menu" *ngIf="isDropdownOpen">
+            <a >Logout</a>
+          </div>
+        </div>      
+      </div>
+    </div>      
+  </div>
+</header>
+
+<div class="content-container">
+  <router-outlet></router-outlet>
+</div>

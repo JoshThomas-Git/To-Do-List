@@ -1,0 +1,145 @@
+.todo-header {
+  background-color: #8f23ed;  
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  height: 50px; /* Fixed height for consistent alignment */
+  display: flex;
+  align-items: center;
+}
+
+.fixed-top {
+  position: fixed; 
+  top: 0;
+  width: 100%;
+  z-index: 1030;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  width: 100%;
+  max-width: 100%; 
+  height: 100%;
+}
+
+.left-section {
+  display: flex;
+  align-items: center;
+  height: 90%;
+}
+
+.logo {
+  height: 40px; 
+  width: auto;
+ // margin: 20px; /* Space between logo and nav items */ 
+}
+
+.right-section {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  height: 40px;
+}
+
+.content-container {
+  margin-top: 70px; /* Matches header height */
+  padding: 20px;
+  min-height: calc(100vh - 70px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .header-container {
+    padding: 0 5px;
+  }
+  
+  .logo {
+    margin-right: 15px;
+    height: 35px;
+  }
+  
+  .right-section {
+    gap: 10px;
+  }
+}
+
+.sub-banner {
+  background-color: #1aaa88;
+  border-bottom: 1px solid #ddd;
+  height: 27px;
+  display: flex;
+  align-items: center;
+  top: 60px; /* directly below header (header height = 60px) */
+  width: 100%;
+  z-index: 1025; /* just below header */
+  margin: 0px;
+}
+
+.sub-banner-container {
+  padding: 0 20px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.sub-banner-title {
+  font-size: 14px;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.content-container {
+  margin-top: 85px; /* 60px header + 40px sub-banner + 10px gap */
+  padding: 20px;
+  min-height: calc(100vh - 110px);
+}
+
+.user-dropdown {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.user-name {
+  font-weight: 600;
+  font-size: 16px;
+  color: white;
+  padding: 5px 10px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.user-name .arrow {
+  font-size: 16px;
+}
+
+.dropdown-menu {
+  position: absolute;
+  right: 0;
+  top: 100%;
+  background: white;
+  color: black;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  min-width: 120px;
+  display: flex;
+  flex-direction: column;
+  z-index: 2000;
+  padding: 0;
+  margin: 0;
+}
+
+.dropdown-menu a {
+  padding: 5px;
+  text-decoration: none;
+  color: black;
+  display: block;
+  cursor: pointer;
+}
+
+.dropdown-menu a:hover {
+  background-color: #f0f0f0;
+}
+

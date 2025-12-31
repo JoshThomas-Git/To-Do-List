@@ -1,0 +1,41 @@
+<div class="todo-container">
+  <!-- Left Column: Inputs + Task List -->
+  <div class="todo-left">
+    <h2>My To-Do List</h2>
+
+    <div class="input-column">
+      <input type="text" [(ngModel)]="newTask" placeholder="Add a new task..." (keyup.enter)="addTask()" />
+      <input type="text" [(ngModel)]="newNote" placeholder="Add Note" (keyup.enter)="addTask()" />
+      <input type="date" [(ngModel)]="newDate" />
+      <button (click)="addTask()">Add</button>
+    </div>
+
+    <!-- History -->
+    <!-- <div *ngFor="let task of tasks" class="task-row">
+      <div class="task-left">
+        <input type="checkbox" [(ngModel)]="task.completed" (change)="toggleComplete(task)" />
+        <span [class.completed]="task.completed">{{ task.title }}</span>
+      </div>
+      <button class="delete-btn" (click)="deleteTask(task.id!)">🗑</button>
+    </div> -->
+  </div>
+
+  <!-- Right Column: Cards -->
+  <div class="todo-right">
+    <div class="todo-cards-container">
+      <div class="todo-card" *ngFor="let task of tasks">
+        <div class="card-content">
+          <h3>{{ task.name }} (ID: {{ task.id }})</h3>
+          <p>Note: {{ task.age }}</p>
+          <div class="card-actions">
+            <label>
+              <input type="checkbox" [(ngModel)]="task.completed">
+              Completed
+            </label>
+            <button pButton type="button" icon="pi pi-trash" class="p-button-danger"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
